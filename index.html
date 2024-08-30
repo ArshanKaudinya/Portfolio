@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arshan Kaudinya</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/d017420399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id = 'header'>
+        <div class = "container">
+            <nav>
+                <img src = "assets/logo.jpeg" class = "logo">
+                <ul id = "togglemenu">
+                    <li><a href = "#header">Home</a></li>
+                    <li><a href = "#about">About</a></li>
+                    <li><a href = "#portfolio">Portfolio</a></li>
+                    <li><a href = "#contact">Contact</a></li>
+                    <i class = "fa-solid fa-xmark" onclick = "closemenu()"></i>
+                </ul>
+                <i class = "fa-solid fa-bars" onclick = "openmenu()"></i>
+            </nav>
+            <div class = "header-text">
+                <p>B.tech CS and Engineering</p>
+                <h1>Hey, I'm <span>Arshan Kaudinya</span></h1>
+            </div>
+        </div>
+    </div>
+    <!------------about------------>
+    <div id = "about">
+        <div class = "container">
+            <div class = "row">
+                <div class = "about-col-1">
+                    <img src = "assets/selfie1.jpg">
+                </div>
+                <div class = "about-col-2">
+                    <h1 class = "sub-title">About me</h1>
+                    <p class = "about-para">
+                        Greetings, I'm Arshan Kaudinya, currently pursuing a B.Tech in Computer Science and Engineering
+                        at Vellore Institute of Technology.
+                        <br><br>  
+                    </p>
+                    <p class = "about-para-2">
+                        I excel in merging my academic curriculum with personal projects, evident in my creation of this website.
+                        Beyond academics, I'm passionate about fitness, literature, music, and socializing.
+                        I'm dedicated to challenging myself physically, exploring diverse literature, and finding inspiration
+                        in music. As a social person,
+                        I value connections and enjoy engaging with others.<br>
+                        My goal is to excel academically while maintaining a fulfilling personal life, enriched by my varied
+                        interests and connections.
+                    </p>
+                    <div class="tab-titles">
+                        <p class = "tab-links active-link" onclick = "opentab('skills')">Skills</p>
+                        <p class = "tab-links" onclick = "opentab('experience')">Experience</p>
+                        <p class = "tab-links" onclick = "opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id = "skills">
+                        <ul>
+                            <li><span>Web Developer</span><br>Developing Web Applications</li>
+                            <li><span>Video Editing</span><br>Knowledge in Abobe Premiere Pro</li>
+                            <li><span>Software Development</span><br>Python</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id = "experience">
+                        <ul>
+                            <li><span>Web Development</span><br>Website development including this portfolio</li>
+                            <li><span>Video Editing</span><br>Editing for domestic and foreign clients</li>
+                            <li><span>Software Development</span><br>Python</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id = "education">
+                        <ul>
+                            <li><span>Schooling</span><br>Mount Carmel School - PCM</li>
+                            <li><span>Graduation</span><br> Vellore Institute of Technology - B.tech CSE</li>
+                            <li><span>Online Courses</span><br>MIT EDX</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----------------------portfolio---------------------->
+    <div id="portfolio">
+        <h1 class = "portfolio-header">Portfolio</h1>
+        <div class="cards-container">
+            <div class = "card">
+                <div class="card-inner">
+                    <div class="card-face card-face-front">
+                        <h2 class="text-overlay">Web Development</h2>
+                        <i class="fa-solid fa-code"></i>  
+                    </div>
+                    <div class="card-face card-face-back">
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h2>Website portfolio</h2>
+                            </div>
+                            <div class="card-body">
+                                <p>
+                                    My website portfolio is like a journey through my professional story, infused with creativity and personality.
+                                    It's not just a resume; it's an immersive experience that grabs attention and leaves a lasting impression.
+                                </p>
+                                <p>
+                                    With interactive design elements and captivating storytelling, I bring my skills and experiences to life in a way that's both engaging and memorable.
+                                    From colorful visuals to seamless navigation, every aspect is designed to spark curiosity and keep visitors hooked.
+                                </p>
+                                <p>
+                                    And with opportunities for interaction and feedback, it's not just about showcasing my work—it's about building connections and sparking conversations.
+                                </p>                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-face card-face-front">
+                        <h2 class="text-overlay">Current goals</h2>
+                        <i class="fa-solid fa-bookmark"></i>
+                    </div>
+                    <div class="card-face card-face-back">
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h2></h2>
+                            </div>
+                            <div class="card-body">
+                                <ul>
+                                    <li>
+                                        <strong>Introduction to Statistical Learning:</strong> 
+                                        <span>This book helps me get comfortable with statistics using Python and R, providing a solid foundation in data analysis and statistical methods.</span>
+                                    </li>
+                                    <li>
+                                        <strong>Advanced Python and Data Structures & Algorithms (DSA):</strong>
+                                        <span>Improving my proficiency in Python and deepening my understanding of data structures and algorithms for better problem-solving skills.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-face card-face-front">
+                        <h2 class="text-overlay">Further prospects</h2>
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <div class="card-face card-face-back">
+                        <div class="card-content">
+                            <div class="card-header">
+                                <h2>Coming soon!</h2>
+                            </div>
+                            <div class="card-body">
+                                <h3></h3>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-----------------------contact---------------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class = "sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>&nbsp;kaudinyaarshan@gmail.com</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/arshan-kaudinya-54b333255?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BYP%2B%2FwDJXQ3KMyOrPjSWL%2FQ%3D%3D"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <a href = "" class = "btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type = "text" name = "name" placeholder = "Your name" required>
+                        <input type = "email" name = "email" placeholder = "Your email" required>
+                        <textarea name = "message" rows = "6" placeholder = "Your message"></textarea>
+                        <button type = "submit" class = "btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+    document.querySelectorAll(".card-inner").forEach(card => {
+            card.addEventListener("click", function () {
+                card.classList.toggle('is-flipped');
+            });
+        });
+
+</script>
+
+<script>
+    var sidemenu = document.getElementById("togglemenu")
+
+    function openmenu(){
+        sidemenu.style.right = "0px";
+        sidemenu.style.transition = "ease-in 0.4s";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+        sidemenu.style.transition = "ease-out 0.4s";
+    }
+</script>
+</body>
+</html>
