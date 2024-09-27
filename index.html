@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+    <base href="/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arshan Kaudinya</title>
@@ -181,61 +181,38 @@
     </div>
 
 <script>
-    
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
+    const tablinks = document.getElementsByClassName("tab-links");
+    const tabcontents = document.getElementsByClassName("tab-contents");
 
-    function opentab(tabname){
-        for(tablink of tablinks){
+    function opentab(tabname, event) {
+        Array.from(tablinks).forEach(tablink => {
             tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents){
+        });
+
+        Array.from(tabcontents).forEach(tabcontent => {
             tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link")
-        document.getElementById(tabname).classList.add("active-tab")
+        });
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
     }
 
     document.querySelectorAll(".card-inner").forEach(card => {
-            card.addEventListener("click", function () {
-                card.classList.toggle('is-flipped');
-            });
+        card.addEventListener("click", function () {
+            card.classList.toggle('is-flipped');
         });
+    });
 
+    const sidemenu = document.getElementById("togglemenu");
+
+    function openmenu() {
+        sidemenu.style.right = "0px";
+    }
+
+    function closemenu() {
+        sidemenu.style.right = "-200px";
+    }
 </script>
-
-<script>
-    const tablinks = document.getElementsByClassName("tab-links");
-const tabcontents = document.getElementsByClassName("tab-contents");
-
-function opentab(tabname, event) {
-    Array.from(tablinks).forEach(tablink => {
-        tablink.classList.remove("active-link");
-    });
-
-    Array.from(tabcontents).forEach(tabcontent => {
-        tabcontent.classList.remove("active-tab");
-    });
-
-    event.currentTarget.classList.add("active-link");
-    document.getElementById(tabname).classList.add("active-tab");
-}
-
-document.querySelectorAll(".card-inner").forEach(card => {
-    card.addEventListener("click", function () {
-        card.classList.toggle('is-flipped');
-    });
-});
-
-const sidemenu = document.getElementById("togglemenu");
-
-function openmenu() {
-    sidemenu.style.right = "0px";
-}
-
-function closemenu() {
-    sidemenu.style.right = "-200px";
-}
-</script>
+    
 </body>
 </html>
