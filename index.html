@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arshan Kaudinya</title>
@@ -8,78 +9,71 @@
     <script src="https://kit.fontawesome.com/d017420399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id = 'header'>
-        <div class = "container">
+    <div id="header">
+        <div class="container">
             <nav>
-                <img src = "assets/logo.jpeg" class = "logo">
-                <ul id = "togglemenu">
-                    <li><a href = "#header">Home</a></li>
-                    <li><a href = "#about">About</a></li>
-                    <li><a href = "#portfolio">Portfolio</a></li>
-                    <li><a href = "#contact">Contact</a></li>
-                    <i class = "fa-solid fa-xmark" onclick = "closemenu()"></i>
+                <img src="assets/logo.jpeg" class="logo">
+                <ul id="togglemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
-                <i class = "fa-solid fa-bars" onclick = "openmenu()"></i>
             </nav>
-            <div class = "header-text">
-                <p>B.tech CS and Engineering</p>
-                <h1>Hey, I'm <span>Arshan Kaudinya</span></h1>
+            <div class="header-text">
+                <p>Arshan Kaudinya is pursuing a B.Tech in Computer Science and is always on the lookout for new oppurtunities.</p>
             </div>
         </div>
     </div>
+    
+    
     <!------------about------------>
-    <div id = "about">
-        <div class = "container">
-            <div class = "row">
-                <div class = "about-col-1">
-                    <img src = "assets/selfie1.jpg">
+    <div id="about">
+        <div class="container">
+            <div class="about-row">
+                <div class="about-text">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="about-para">
+                        Greetings, I'm Arshan Kaudinya, currently pursuing a B.Tech in Computer Science and Engineering at Vellore Institute of Technology.
+                    </p>
+                    <p class="about-para">
+                        I excel in merging my academic curriculum with personal projects, evident in my creation of this website. Beyond academics, I'm passionate about fitness, literature, music, and socializing. I'm dedicated to challenging myself physically, exploring diverse literature, and finding inspiration in music. As a social person, I value connections and enjoy engaging with others.
+                    </p>
+                    <p class="about-para">
+                        My goal is to excel academically while maintaining a fulfilling personal life, enriched by my varied interests and connections.
+                    </p>
                 </div>
-                <div class = "about-col-2">
-                    <h1 class = "sub-title">About me</h1>
-                    <p class = "about-para">
-                        Greetings, I'm Arshan Kaudinya, currently pursuing a B.Tech in Computer Science and Engineering
-                        at Vellore Institute of Technology.
-                        <br><br>  
-                    </p>
-                    <p class = "about-para-2">
-                        I excel in merging my academic curriculum with personal projects, evident in my creation of this website.
-                        Beyond academics, I'm passionate about fitness, literature, music, and socializing.
-                        I'm dedicated to challenging myself physically, exploring diverse literature, and finding inspiration
-                        in music. As a social person,
-                        I value connections and enjoy engaging with others.<br>
-                        My goal is to excel academically while maintaining a fulfilling personal life, enriched by my varied
-                        interests and connections.
-                    </p>
+                <div class="tab-section">
                     <div class="tab-titles">
-                        <p class = "tab-links active-link" onclick = "opentab('skills')">Skills</p>
-                        <p class = "tab-links" onclick = "opentab('experience')">Experience</p>
-                        <p class = "tab-links" onclick = "opentab('education')">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
-                    <div class="tab-contents active-tab" id = "skills">
+                    <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li><span>Web Developer</span><br>Developing Web Applications</li>
-                            <li><span>Video Editing</span><br>Knowledge in Abobe Premiere Pro</li>
+                            <li><span>Video Editing</span><br>Knowledge in Adobe Premiere Pro</li>
                             <li><span>Software Development</span><br>Python</li>
                         </ul>
                     </div>
-                    <div class="tab-contents" id = "experience">
+                    <div class="tab-contents" id="experience">
                         <ul>
                             <li><span>Web Development</span><br>Website development including this portfolio</li>
                             <li><span>Video Editing</span><br>Editing for domestic and foreign clients</li>
                             <li><span>Software Development</span><br>Python</li>
                         </ul>
                     </div>
-                    <div class="tab-contents" id = "education">
+                    <div class="tab-contents" id="education">
                         <ul>
                             <li><span>Schooling</span><br>Mount Carmel School - PCM</li>
-                            <li><span>Graduation</span><br> Vellore Institute of Technology - B.tech CSE</li>
+                            <li><span>Graduation</span><br> Vellore Institute of Technology - B.Tech CSE</li>
                             <li><span>Online Courses</span><br>MIT EDX</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div>    
     <!-----------------------portfolio---------------------->
     <div id="portfolio">
         <h1 class = "portfolio-header">Portfolio</h1>
@@ -211,16 +205,37 @@
 </script>
 
 <script>
-    var sidemenu = document.getElementById("togglemenu")
+    const tablinks = document.getElementsByClassName("tab-links");
+const tabcontents = document.getElementsByClassName("tab-contents");
 
-    function openmenu(){
-        sidemenu.style.right = "0px";
-        sidemenu.style.transition = "ease-in 0.4s";
-    }
-    function closemenu(){
-        sidemenu.style.right = "-200px";
-        sidemenu.style.transition = "ease-out 0.4s";
-    }
+function opentab(tabname, event) {
+    Array.from(tablinks).forEach(tablink => {
+        tablink.classList.remove("active-link");
+    });
+
+    Array.from(tabcontents).forEach(tabcontent => {
+        tabcontent.classList.remove("active-tab");
+    });
+
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+document.querySelectorAll(".card-inner").forEach(card => {
+    card.addEventListener("click", function () {
+        card.classList.toggle('is-flipped');
+    });
+});
+
+const sidemenu = document.getElementById("togglemenu");
+
+function openmenu() {
+    sidemenu.style.right = "0px";
+}
+
+function closemenu() {
+    sidemenu.style.right = "-200px";
+}
 </script>
 </body>
 </html>
